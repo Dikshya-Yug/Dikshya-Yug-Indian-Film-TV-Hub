@@ -1,0 +1,396 @@
+/* =====================
+   Global Styles
+===================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+h1,h2,h3,h4,h5,h6,
+.nav-link,
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* =====================
+   Navbar Styles
+===================== */
+.navbar {
+  background-color: #fff !important;
+  border-bottom: 2px solid #FFD700;
+  padding: 10px 0;
+}
+
+.navbar-brand img {
+  height: 65px;
+}
+
+/* Nav links → Poppins */
+.nav-link {
+    color: #000 !important;
+    font-weight: 500;
+    font-family: 'Poppins' !important;
+    text-transform: uppercase;
+    padding-right: 30px !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #FFD700 !important;
+}
+
+/* =====================
+   Navbar Contact Number → Orbitron
+===================== */
+.navbar-contact .contact-number {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  color: brown;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  animation: pulse 1.5s infinite; /* 🔥 Animated pulse */
+  transition: color 0.3s ease;
+}
+
+.navbar-contact .contact-number:hover {
+  color: #000;
+}
+
+/* Phone icon */
+.navbar-contact .fa-phone {
+  background: brown;
+  color: #fff;
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 0.9rem;
+}
+
+/* =====================
+   Pulse Animation
+===================== */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+/* =====================
+   Hero / Banner
+===================== */
+.banner-slide { position: relative; height: 600px; overflow: hidden; }
+.banner-slide img { width: 100%; height: 100%; object-fit: cover; }
+.banner-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); z-index: 1;
+}
+.hero-text {
+    position: absolute; bottom: 20%; left: 10%;
+    z-index: 2; color: #fff;
+}
+.hero-text h1 { font-size: 3rem; font-weight: bold; color: #fff; }
+
+.section-title {
+    color: #000;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border-bottom: 3px solid #FFD700;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* =====================
+   Services
+===================== */
+.service-card {
+    position: relative; height: 320px; overflow: hidden;
+    border-radius: 15px 0 15px 0;
+    transition: all 0.4s ease;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 20px;
+}
+.alt-yellow { background: #FFD700; color: #000; }
+.alt-black { background: #000; color: #fff; }
+.service-content h5 { font-family: 'Orbitron', sans-serif; margin-bottom: 10px; }
+.service-content p { font-size: 0.9rem; margin-bottom: 15px; }
+.service-card::before {
+    content: ""; position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: var(--bg-img) no-repeat center/cover;
+    z-index: 0; opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.service-card::after {
+    content: ""; position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,215,0,0.4));
+    z-index: 1; opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.service-card:hover::before { opacity: 1; transform: scale(1.1); }
+.service-card:hover::after { opacity: 1; }
+.service-card .service-content { position: relative; z-index: 2; transition: transform 0.4s ease; }
+.service-card:hover .service-content { transform: translateY(-5px); }
+
+/* =====================
+   Clients
+===================== */
+.client-logo {
+    background: #fff; border-radius: 10px; padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 120px; display: flex; align-items: center; justify-content: center;
+}
+.client-logo img { max-height: 80px; object-fit: contain; }
+.client-logo:hover { transform: scale(1.1); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+/* =====================
+   Casting
+===================== */
+.casting-card { position: relative; border-radius: 8px; overflow: hidden; }
+.fixed-img { width: 100%; height: 300px; object-fit: cover; transition: transform 0.5s ease; }
+.casting-overlay {
+    position: absolute; bottom: 0; left: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(255,215,0,0.4));
+    color: #fff; width: 100%; padding: 20px;
+    transform: translateY(100%); transition: transform 0.4s ease;
+}
+.casting-card:hover img { transform: scale(1.1); }
+.casting-card:hover .casting-overlay { transform: translateY(0); }
+
+/* =====================
+   Facts & Skills
+===================== */
+.fact-box {
+    background: #fff; padding: 20px; border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.fact-box h3 { font-size: 2rem; font-weight: 700; margin-bottom: 5px; }
+.fact-box p { font-size: 0.9rem; color: #444; }
+.skills-section p { font-size: 1rem; line-height: 1.7; }
+.progress-box h6 { font-size: 0.9rem; margin-bottom: 5px; }
+.progress { height: 8px; border-radius: 4px; background: #e9ecef; }
+.progress-bar { border-radius: 4px; }
+
+/* =====================
+   Testimonials
+===================== */
+.testimonial-card {
+    background: #fff; border: 1px solid #eee; border-radius: 8px;
+    padding: 25px; min-height: 200px; text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.testimonial-card p { font-size: 0.95rem; margin-bottom: 15px; }
+.testimonial-card h6 { font-size: 0.9rem; color: #FF6600; font-weight: 600; margin: 0; }
+
+/* =====================
+   Director Message
+===================== */
+#director-message { background: #f9f9f9; border-top: 4px solid #FFD700; }
+#director-message .section-title { border-left: 5px solid #FF6600; padding-left: 12px; }
+.director-img-box { position: relative; overflow: hidden; border-radius: 12px; }
+.director-img-box img { transition: transform 0.4s ease; }
+.director-img-box:hover img { transform: scale(1.05); }
+.director-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(255,215,0,0.4));
+    opacity: 0; transition: opacity 0.4s ease; border-radius: 12px;
+}
+.director-img-box:hover .director-overlay { opacity: 1; }
+
+/* =====================
+   Map
+===================== */
+#map { background: #f9f9f9; border-top: 4px solid #FFD700; }
+#map .section-title { border-bottom: 3px solid #FFD700; display: inline-block; padding-bottom: 5px; }
+.map-container { border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
+
+/* =====================
+   Contact
+===================== */
+#contact .section-title { border-left: 5px solid #FF6600; padding-left: 12px; }
+.contact-form .form-control { border-radius: 8px; border: 1px solid #ddd; padding: 12px; }
+.contact-form .form-control:focus { border-color: #FFD700; box-shadow: 0 0 6px rgba(255,215,0,0.4); }
+.contact-form button { border-radius: 8px; padding: 12px; font-size: 1rem; }
+
+/* =====================
+   Footer
+===================== */
+footer { background: #000; padding: 20px 0; color: #fff; }
+footer a { color: #FFD700; text-decoration: none; }
+
+
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;               /* ✅ fixed width */
+  height: 60px;              /* ✅ fixed height */
+  background-color: #25D366;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 50%;        /* ✅ perfectly round */
+  display: flex;             /* ✅ center the icon */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: all 0.3s ease;
+  text-decoration: none;     /* remove underline */
+}
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+
+
+/* Navbar Contact Number */
+.navbar-contact .contact-number {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  color: brown;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  animation: pulse 1.5s infinite;
+  transition: color 0.3s ease;
+}
+
+.navbar-contact .contact-number:hover {
+  color: #000;
+}
+
+.navbar-contact .fa-phone {
+  background: brown;
+  color: #fff;
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 0.9rem;
+}
+
+/* Animation */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+
+
+/* =====================
+   Responsive - Main Page
+===================== */
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  /* Hero */
+  .banner-slide { height: 450px; }
+  .hero-text { bottom: 15%; left: 5%; }
+  .hero-text h1 { font-size: 2.2rem; }
+
+  /* Services */
+  .service-card { height: 280px; margin-bottom: 20px; }
+
+  /* Casting */
+  .fixed-img { height: 250px; }
+
+  /* Testimonials */
+  .testimonial-card { min-height: auto; padding: 20px; }
+
+  /* Director message */
+  #director-message .section-title { font-size: 1.6rem; }
+  .director-img-box { margin-bottom: 20px; }
+}
+
+/* Mobiles (max-width: 767px) */
+@media (max-width: 767px) {
+  
+    body {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  
+    /* Hero */
+  .banner-slide { height: 350px; }
+  .hero-text { bottom: 10%; left: 50%; transform: translateX(-50%); text-align: center; }
+  .hero-text h1 { font-size: 1.8rem; }
+
+  /* Section titles */
+  .section-title { font-size: 1.4rem; margin-bottom: 20px; }
+
+  /* Services */
+  .service-card { height: 250px; }
+  .service-content p { font-size: 0.85rem; }
+
+  /* Clients */
+  .client-logo { height: 100px; padding: 15px; }
+  .client-logo img { max-height: 60px; }
+
+  /* Casting */
+  .fixed-img { height: 200px; }
+
+  /* Facts */
+  .fact-box h3 { font-size: 1.5rem; }
+  .fact-box p { font-size: 0.85rem; }
+
+  /* Skills */
+  .skills-section p { font-size: 0.9rem; }
+
+  /* Testimonials */
+  .testimonial-card p { font-size: 0.85rem; }
+
+  /* Director message */
+  #director-message p { font-size: 0.9rem; }
+}
+
+/* Small Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Hero */
+  .banner-slide { height: 250px; }
+  .hero-text h1 { font-size: 1.4rem; }
+  .hero-text { bottom: 8%; }
+
+  /* Services */
+  .service-card { height: 220px; padding: 15px; }
+  .service-content h5 { font-size: 1rem; }
+
+  /* Clients */
+  .client-logo { height: 90px; }
+  .client-logo img { max-height: 50px; }
+
+  /* Casting */
+  .fixed-img { height: 180px; }
+
+  /* Facts & Skills */
+  .fact-box h3 { font-size: 1.3rem; }
+  .fact-box p { font-size: 0.8rem; }
+  .progress-box h6 { font-size: 0.8rem; }
+
+  /* Testimonials */
+  .testimonial-card { padding: 15px; }
+  .testimonial-card h6 { font-size: 0.8rem; }
+
+  /* Director message */
+  #director-message .section-title { font-size: 1.2rem; }
+
+  /* Footer */
+  footer { text-align: center; }
+  footer .col-md-4 { margin-bottom: 20px; }
+}

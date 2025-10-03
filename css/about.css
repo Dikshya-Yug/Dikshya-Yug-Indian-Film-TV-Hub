@@ -1,0 +1,427 @@
+/* =====================
+   About Us Page Styles
+===================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+h1,h2,h3,h4,h5,h6,
+.nav-link,
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff !important;
+    border-bottom: 2px solid #FFD700;
+}
+.navbar-brand img { height: 65px; }
+.nav-link { color: #000 !important; font-weight: 500; }
+.nav-link:hover { color: #FFD700 !important; }
+
+/* Hero Section */
+#about-hero {
+  position: relative;
+  padding: 120px 20px;
+  color: #fff;
+   background: url('../assets/images/breadcrumb.jpg') center/cover no-repeat;
+}
+#about-hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(255,215,0,0.3));
+  z-index: 0;
+}
+#about-hero .container {
+  position: relative;
+  z-index: 1;
+}
+#about-hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+#about-hero p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Who We Are */
+/* Who We Are Section */
+#who-we-are {
+  background: #fdfdfd;
+  position: relative;
+}
+
+.section-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FF6600;
+  font-weight: 500;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.section-title .highlight {
+  color: #FFD700;
+}
+
+.highlight-text {
+  color: #FF6600;
+  font-weight: 500;
+}
+
+/* Image styling */
+#who-we-are {
+  background: #fff;
+}
+
+#who-we-are .section-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FF6600;
+  font-weight: 500;
+  display: block;
+}
+
+#who-we-are .section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#who-we-are .section-title .highlight {
+  color: #FFD700;
+}
+
+#who-we-are p {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  max-width: 850px;
+  margin: 0 auto 15px;
+  color: #444;
+}
+
+#who-we-are blockquote {
+  max-width: 750px;
+  margin: 0 auto;
+  font-style: italic;
+  border-radius: 6px;
+}
+
+.highlight-box {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.highlight-box:hover {
+  background: #FFD700;
+  color: #000;
+  transform: translateY(-5px);
+}
+.highlight-box h6 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+/* Mission & Vision */
+/* Mission & Vision Section */
+#mission-vision {
+  background: linear-gradient(to right, #000, #1a1a1a, #FFD700);
+  color: #fff;
+  position: relative;
+}
+
+#mission-vision .section-subtitle {
+  color: #FFD700;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#mission-vision .section-title {
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+#mission-vision .section-title .highlight {
+  color: #FFD700;
+}
+
+/* Card styling */
+.mv-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(6px);
+}
+.mv-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 215, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.mv-card h4 {
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 15px;
+  font-weight: 700;
+  color: #FFD700;
+}
+
+.mv-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  color: #ddd;
+}
+
+/* Icon */
+.mv-icon {
+  width: 80px;
+  height: 80px;
+  background: #FFD700;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 15px;
+  transition: all 0.3s ease;
+}
+.mv-card:hover .mv-icon {
+  background: #fff;
+  color: #FFD700;
+  transform: scale(1.1);
+}
+
+
+
+
+
+/* Team */
+/* Team Section */
+#team .section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.team-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.team-img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.team-img-box img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+.team-img-box:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay */
+.team-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+}
+.team-img-box:hover .team-overlay {
+  opacity: 1;
+}
+
+.team-overlay .social a {
+  color: #FFD700;
+  font-size: 1.2rem;
+  margin: 0 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.team-overlay .social a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.team-card h5 {
+  margin-top: 15px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+}
+.team-card p {
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+}
+
+
+
+/* Call to Action */
+#cta-about {
+  background: linear-gradient(135deg, #000, #FFD700);
+  color: #fff;
+  text-align: center;
+}
+#cta-about h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+}
+
+
+/* =====================
+   Responsive Media Queries
+===================== */
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  /* Hero */
+  #about-hero {
+    padding: 80px 15px;
+    text-align: center;
+  }
+  #about-hero h1 {
+    font-size: 2.2rem;
+  }
+  #about-hero p {
+    font-size: 1rem;
+  }
+
+  /* Mission & Vision cards */
+  .mv-card {
+    margin-bottom: 25px;
+  }
+
+  /* Team section */
+  .team-card {
+    margin-bottom: 30px;
+  }
+  .team-card h5 {
+    font-size: 1rem;
+  }
+  .team-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  /* Hero */
+  #about-hero {
+    padding: 60px 15px;
+    min-height: 250px;
+  }
+  #about-hero h1 {
+    font-size: 1.8rem;
+  }
+  #about-hero p {
+    font-size: 0.9rem;
+  }
+
+  /* Who We Are */
+  #who-we-are .section-title {
+    font-size: 1.6rem;
+  }
+  #who-we-are p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  /* Mission & Vision */
+  #mission-vision .section-title {
+    font-size: 1.6rem;
+  }
+  .mv-card h4 {
+    font-size: 1rem;
+  }
+  .mv-card p {
+    font-size: 0.85rem;
+  }
+  .mv-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  /* Team */
+  #team .section-title {
+    font-size: 1.6rem;
+  }
+  .team-card {
+    margin-bottom: 25px;
+  }
+
+  /* Call to Action */
+  #cta-about h2 {
+    font-size: 1.5rem;
+  }
+  #cta-about p {
+    font-size: 0.9rem;
+  }
+  #cta-about .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  #about-hero h1 {
+    font-size: 1.5rem;
+  }
+  #about-hero p {
+    font-size: 0.85rem;
+  }
+
+  #who-we-are p,
+  .mv-card p,
+  .team-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .team-overlay .social a {
+    font-size: 1rem;
+    margin: 0 5px;
+  }
+}

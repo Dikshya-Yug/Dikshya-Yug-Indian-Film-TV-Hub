@@ -1,0 +1,157 @@
+/* Hero */
+#services-hero {
+  position: relative;
+  padding: 120px 20px;
+  text-align: center;
+  color: #fff;
+   background: url('../assets/images/breadcrumb.jpg') center/cover no-repeat;
+}
+#services-hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+#services-hero .container {
+  position: relative;
+  z-index: 1;
+}
+#services-hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+#services-hero p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Service Grid */
+/* Section Title */
+#services .section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  border-bottom: 3px solid #FFD700;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Service Row */
+.service-row {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+.service-row.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Service Image */
+.service-row img {
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+.service-row img:hover {
+  transform: scale(1.05);
+}
+
+/* Headings & Text */
+.service-row h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  color: #000;
+}
+.service-row p {
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.service-row .btn {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+.btn-warning {
+  background: #FFD700;
+  color: #000;
+  border: none;
+}
+.btn-warning:hover {
+  background: #e6c200;
+}
+.btn-dark:hover {
+  background: #333;
+}
+
+
+/* =======================
+   RESPONSIVE - TABLET
+   ======================= */
+@media (max-width: 991px) {
+  /* Hero text */
+  #services-hero {
+    padding: 80px 15px;
+  }
+  #services-hero h1 {
+    font-size: 2.2rem;
+  }
+  #services-hero p {
+    font-size: 1rem;
+  }
+
+  /* Service rows */
+  .service-row {
+    text-align: center; /* center-align on tablet */
+  }
+  .service-row img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .service-row h3 {
+    font-size: 1.5rem;
+  }
+  .service-row p {
+    font-size: 0.95rem;
+  }
+}
+
+/* =======================
+   RESPONSIVE - MOBILE
+   ======================= */
+@media (max-width: 576px) {
+  /* Hero */
+  #services-hero {
+    padding: 60px 10px;
+  }
+  #services-hero h1 {
+    font-size: 1.8rem;
+  }
+  #services-hero p {
+    font-size: 0.9rem;
+  }
+
+  /* Service rows stack */
+  .service-row {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .service-row img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .service-row h3 {
+    font-size: 1.3rem;
+  }
+  .service-row p {
+    font-size: 0.9rem;
+  }
+  .service-row .btn {
+    width: 100%; /* full-width button on mobile */
+    margin-top: 10px;
+  }
+}
